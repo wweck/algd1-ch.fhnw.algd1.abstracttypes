@@ -5,8 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import ch.fhnw.algd1.maxsubsequence.MaxSubProblem;
-
 public class MaxSubProblemTest {
 	private MaxSubProblem ms;
 
@@ -108,6 +106,12 @@ public class MaxSubProblemTest {
 	@Test
 	public void testAllNegative() {
 		int[] numbers = new int[] { -31, -59, -26, -13, -47 };
+		assertEquals(0, ms.maxSub(numbers));
+	}
+
+	@Test
+	public void testEmpty() {
+		int[] numbers = new int[0];
 		assertEquals(0, ms.maxSub(numbers));
 	}
 }
