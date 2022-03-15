@@ -7,8 +7,6 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import ch.fhnw.algd1.simplearraylist.SimpleArrayList;
-
 public class SimpleArrayListTest {
 	private SimpleArrayList<Integer> list;
 
