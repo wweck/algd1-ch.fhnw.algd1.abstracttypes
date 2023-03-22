@@ -83,11 +83,19 @@ public class SimpleArrayListTest {
 		fail("Exception was expected");
 	}
 
-	@Test(expected = IndexOutOfBoundsException.class)
-	public void testAddOnNegativIndex_ExpectException() {
-		list.add(-1, 2);
-		fail("Exception was expected");
-	}
+  @Test
+  public void testAddOnNegativIndex_ExpectException() {
+      int[] numbers = new int[]{1, 4, 6, 7};
+      for (int number : numbers) {
+          list.add(number);
+      }
+      try {
+          list.add(-1, 2);
+          fail("Exception was expected");
+      } catch (IndexOutOfBoundsException e) {
+          assertListValues(numbers);
+      }
+  }
 
 	@Test(expected = IndexOutOfBoundsException.class)
 	public void testAddOnHugeTooLargeIndex_ExpectException() {
