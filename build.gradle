@@ -31,3 +31,10 @@ task testSimpleArrayList (type: Test) {
 	
 	include('ch/fhnw/algd1/simplearraylist/*.class')
 }
+
+task timeMaxSubSequence (type: JavaExec) {
+	group = 'verification'
+	description = 'Times maximum sub-sequence solution, if it works correctly'
+	classpath sourceSets.test.runtimeClasspath
+	mainClass = 'ch.fhnw.algd1.maxsubsequence.MeasureMaxSubProblem'
+}
